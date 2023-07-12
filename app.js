@@ -25,8 +25,12 @@
 // 21.დაწერეთ პროგრამა სტრიქონის შებრუნებისთვის.
 // Write a program to reverse a string.
 
-function string_reverse(str) {
-  return str.split("").reverse().join("");
-}
+// function string_reverse(str) {
+//   return str.split("").reverse().join("");
+// }
+// console.log(string_reverse("Hello"));
 
-console.log(string_reverse("Hello"));
+// 22.დაწერეთ პროგრამა, რომ იპოვოთ მასივის ყველა რიცხვის ჯამი.
+// Write a program to find the sum of all numbers in an array.
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
