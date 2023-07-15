@@ -1,136 +1,178 @@
-// 19.დაწერეთ პროგრამა რომელიც კონსოლში გამოპრინტავს რიცხვებს 0 დან 10 ის ჩათვლით.
-// Print the numbers from 1 to 10 in the console.
+// 51.დაწერეთ პროგრამა, რომელიც ბეჭდავს ლუწ რიცხვებს 1-დან 20-მდე for loop-ის გამოყენებით.
+// Write a program that prints the even numbers between 1 and 20 using a for loop.
 
-// for (let i = 0; i <= 10; i++) {
+// 1
+// for (let i = 0; i <= 20; i += 2) {
 //   console.log(i);
 // }
 
-// 20.დაწერეთ პროგრამა, რათა შეამოწმოთ რიცხვი მარტივია თუ არა.
-// Write a program to check if a number is prime or not.
-
-// function isPrime(num) {
-//   if (num <= 1) {
-//     return false;
+// 2
+// for (let i = 0; i < 20; i += 2) {
+//   if (i % 2 !== 0) {
+//     continue;
 //   }
-//   for (let i = 2; i <= Math.sqrt(num); i++) {
-//     if (num % i === 0) {
-//       return false;
-//     }
-//   }
-//   return true;
+//   console.log(i);
 // }
 
-// console.log(isPrime(2));
+// // 52.დაწერეთ პროგრამა, რომელიც იღებს რიცხვს ინფუთის სახით და ბეჭდავს კვირის შესაბამის დღეს
+// switch/case-ის გამოყენებით.მაგალითად, თუ შეიყვანენ  1-ს, მან უნდა დაბეჭდოს "კვირა".
+// // Write a program that takes a number as input and prints the corresponding day of the week using as
+// witch/case statement. For example, if the input is 1, it should print "Sunday."
 
-// 21.დაწერეთ პროგრამა სტრიქონის შებრუნებისთვის.
-// Write a program to reverse a string.
+// let num = Number(prompt("რიცხვი  "));
 
-// function string_reverse(str) {
-//   return str.split("").reverse().join("");
+// switch (num) {
+//   case 1:
+//     console.log("კვირა");
+//     break;
+//   case 2:
+//     console.log("ორშაბათი");
+//     break;
+//   case 3:
+//     console.log("სამშაბათი");
+//     break;
+//   case 4:
+//     console.log("ოთხშაბათი");
+//     break;
+//   case 5:
+//     console.log("ხუთშაბათი");
+//     break;
+//   case 6:
+//     console.log("პარასკევი");
+//     break;
+//   case 7:
+//     console.log("შაბათი");
+//     break;
+//   default:
+//     console.log("არ არის კვირის დღე");
 // }
-// console.log(string_reverse("Hello"));
 
-// 22.დაწერეთ პროგრამა, რომ იპოვოთ მასივის ყველა რიცხვის ჯამი.
-// Write a program to find the sum of all numbers in an array.
+// 53.დაწერეთ პროგრამა, რომელიც სთხოვს მომხმარებელს შეიყვანოს რიცხვი და დაბეჭდოს "Hello!" იმდენჯერ
+// რამდენსაც უდრის ეს  შეყვანილი რიცხვი.
+// While Loop:
+// Write a program that asks the user to enter a number and keeps printing "Hello!"
+// that many times using a while loop.
 
-// let array = [1, 2, 3, 4, 15, 61, 7, 14, 10, 16];
+// let num = Number(prompt("რიცხვი "));
 
-// function sum(arr) {
-//   let count = 0;
-//   for (let i = 0; i < arr.length; i++) {
-//     count += arr[i];
-//   }
-//   return count;
+// for (let i = 0; i < num; i++) {
+//   console.log("Hello");
 // }
-// console.log(sum(array));
 
-// 23.დაწერეთ პროგრამა მასივში რიცხვების საშუალოს საპოვნელად.
-// Write a program to find the average of numbers in an array.
-
-// let array = [1, 5, 7, 10, 15, 25];
-
-// function sum(arr) {
-//   let count = 0;
-//   for (let i = 0; i < arr.length; i++) {
-//     count += arr[i];
-//   }
-//   return count / arr.length;
+// 54.დაწერეთ პროგრამა, რომელიც გამოთვლის რიცხვების ჯამს 1-დან 100-მდე for loop-ის გამოყენებით და დაბეჭდავს შედეგს.
+// For Loop:
+// Write a program that calculates the sum of numbers from 1 to 100 using a for loop and prints the result.
+// let num = 0;
+// for (let i = 0; i < 100; i++) {
+//   num += i;
 // }
-// console.log(sum(array));
+// console.log(num);
 
-// 24.დაწერეთ პროგრამა მასივიდან დუბლიკატების მოსაშორებლად.
-// Write a program to remove duplicates from an array.
+// 55.დაწერეთ პროგრამა, რომელიც ინფუთის სახით მიიღებს თვის რიცხვს (1 იანვრისთვის, 2 თებერვლისთვის და ა.შ.) და
+// ამობეჭდავს დღეების რაოდენობას ამ თვეში switch/case-ის გამოყენებით.
+// Switch/Case:
+// Write a program that takes a month number as input (1 for January, 2 for February, etc.)
+// and prints the number of days in that month using a switch/case statement.
 
-// let Array = [1, 2, 3, 1, 5];
-// let result = removeDuplicates(Array);
+// let num = Number(prompt("რიცხვი "));
 
-// function removeDuplicates(Array) {
-//   return [...new Set(Array)];
+// switch (num) {
+//   case 1:
+//     console.log("31");
+//     break;
+//   case 2:
+//     console.log("28");
+//     break;
+//   case 3:
+//     console.log("31");
+//     break;
+//   case 4:
+//     console.log("30");
+//     break;
+//   case 5:
+//     console.log("31");
+//     break;
+//   case 6:
+//     console.log("30");
+//     break;
+//   case 7:
+//     console.log("31");
+//     break;
+//   case 8:
+//     console.log("31");
+//     break;
+//   case 9:
+//     console.log("30");
+//     break;
+//   case 10:
+//     console.log("31");
+//     break;
+//   case 11:
+//     console.log("30");
+//     break;
+//   case 12:
+//     console.log("31");
+//     break;
+//   default:
+//     console.log("არ არის თვე");
 // }
-// console.log(result);
 
-// 25.დაწერეთ პროგრამა რიცხვების მასივის ზრდის მიხედვით დასალაგებლად.
-// Write a program to sort an array of numbers in ascending order.
+// 56.დაწერეთ პროგრამა, რომელიც სთხოვს მომხმარებელს გამოიცნოს საიდუმლო რიცხვი 1-დან 10-მდე.
+// განაგრძეთ გამოცნობის მოთხოვნა, სანამ ისინი სწორად გამოიცნობენ, while loop-ის გამოყენებით.
 
-// let Array = [4, 3, 1, 6, 7];
+// While Loop:
+// Write a program that asks the user to guess a secret number between 1 and 10.
+// Keep asking for guesses until they guess correctly using a while loop.
 
-// console.log(Array.sort((b, a) => b - a));
-
-// 26.დაწერეთ პროგრამა მასივში ყველაზე დიდი ელემენტის მოსაძებნად.
-// Write a program to find the largest element in an array.
-
-// let array = [2, 5, 11, 6, 7, 9];
-
-// function sorted(array) {
-//   let sortedNum = array.sort((a, b) => a - b);
-//   return sortedNum[sortedNum.length - 1];
+// let num = Number(prompt("რიცხვი "));
+// let secretNumber = 4;
+// while (secretNumber !== num) {
+//   num = Number(prompt("რიცხვი "));
 // }
-// console.log(sorted(array));
+// console.log("სწორია ");
 
-// 27.დაწერეთ პროგრამა მასივში ყველაზე პატარა ელემენტის მოსაძებნად.
-// Write a program to find the largest element in an array.
+// 57.დაწერეთ პროგრამა, რომელიც მიიღებს შეფასებას (A, B, C, D ან F) ინფუთის სახით და დაბეჭდავს შესაბამის შეტყობინებას switch/case-ის გამოყენებით.
+// მაგალითად, თუ ინფუთი არის "A", უნდა დაბეჭდოს "შესანიშნავი!"
 
-// let array = [2, 5, 11, 6, 7, 9];
+// Switch/Case:
+// Write a program that takes a grade (A, B, C, D, or F) as input and prints a corresponding message using a
+// switch/case statement. For example, if the input is "A," it should print "Excellent!"
 
-// function sorted(array) {
-//   let sortedNum = array.sort((b, a) => a - b);
-//   return sortedNum[sortedNum.length - 1];
+// let grade = prompt("შეფასება ").toUpperCase();
+
+// switch (grade) {
+//   case "A":
+//     console.log("შესანიშნავი");
+//     break;
+//   case "B":
+//     console.log("ძალიან კარგი");
+//     break;
+//   case "C":
+//     console.log("კარგი");
+//     break;
+//   case "D":
+//     console.log("ნორმალური");
+//     break;
+//   case "F":
+//     console.log("ცუდი");
+//     break;
+//   default:
+//     console.log("ტესტი არ უწერია");
 // }
-// console.log(sorted(array));
 
-// 28.დაწერეთ პროგრამა, რათა შეამოწმოთ, შეიცავს თუ არა მასივი კონკრეტულ ელემენტს.
-// Write a program to check if an array contains a specific element.
+// 58.დაწერეთ პროგრამა, რომელიც მოუწოდებს მომხმარებელს შეიყვანოს პაროლი. პროგრამამ უნდა
+// გააგრძელოს პაროლის მოთხოვნა სწორი პაროლის შეყვანამდე.
+// სწორი პაროლის შეყვანის შემდეგ აჩვენეთ წარმატების შეტყობინება. სწორი პაროლი არის "12345".
 
-// let array = [1, 7, 4, 5, 6];
-// let element = 1;
-// let result = containsElement(array, element);
+// While Loop:
+// Write a program that prompts the user to enter a password.
+// The program should keep asking for the password until the correct password is entered.
+// Once the correct password is entered, display a success message. The correct password is "12345".
 
-// function containsElement(array, element) {
-//   return array.includes(element);
+// let correctPassword = 12345;
+// let password = prompt("პაროლი- ");
+
+// while (password !== "12345") {
+//   password = prompt("პაროლი- ");
 // }
-// console.log(result);
-
-// 29.დაწერეთ პროგრამა მასივიდან ელემენტის ამოსაღებად.
-// Write a program to remove an element from an array.
-
-// let array = [1, 2, 3, 4, "hello", 10];
-// array.shift();
-// console.log(array);
-
-// 30.დაწერეთ პროგრამა მასივში კონკრეტული ელემენტის გავრცელების რაოდენობის დასათვლელად.
-// Write a program to count the number of occurrences of a specific element in an array.
-
-// let array = [1, 2, 2, 2, 3, 4, 4, 5];
-// let element = 2;
-// let result = countOccurrences(array, element);
-
-// function countOccurrences(array, element) {
-//   let count = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] === element) {
-//       count++;
-//     }
-//   }
-//   return count;
-// }
-// console.log(result);
+// console.log("სწორია");
